@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoPay &amp; Account Funding — UX Discovery Case Study</title>
+    <meta
+      name="description"
+      content="Discovery case study: aligning four credit-union clients on what to build first for a new AutoPay and Account Funding capability."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">UX Case Study</span>
+        </a>
+        <nav class="nav" aria-label="Section navigation">
+          <a href="#context">Context</a>
+          <a href="#discovery">Discovery</a>
+          <a href="#themes">Pain themes</a>
+          <a href="#personas">Personas</a>
+          <a href="#priority">Priority</a>
+          <a href="#reflection">Reflection</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="top">
+        <div class="wrap">
+          <p class="eyebrow">Discovery Case Study · 2026</p>
+          <h1 class="hero-title">
+            <span>AutoPay &amp;</span>
+            <span class="serif italic">Account Funding</span>
+            <span>for a credit-union platform.</span>
+          </h1>
+          <p class="hero-lede">
+            Four clients. Twelve feature asks. One question: what do we actually
+            build first? This is the discovery I led to answer it.
+          </p>
+
+          <dl class="meta-grid">
+            <div>
+              <dt>Role</dt>
+              <dd>UX Designer — sole designer on the discovery</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>Stakeholder discovery &amp; prioritization</dd>
+            </div>
+            <div>
+              <dt>Methods</dt>
+              <dd>
+                Stakeholder interviews, transcript synthesis, persona mapping,
+                P0–P2 alignment
+              </dd>
+            </div>
+            <div>
+              <dt>Outcome</dt>
+              <dd>
+                Consolidated 12+ feature asks across 4 clients into a single
+                priority roadmap the team could ship against
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- TL;DR -->
+      <section class="tldr">
+        <div class="wrap tldr-grid">
+          <p class="section-tag">TL;DR</p>
+          <div class="tldr-body">
+            <p>
+              I ran discovery across four credit-union clients for a new AutoPay
+              and Account Funding capability. The working assumption going in
+              was that everyone wanted the same thing — they didn't.
+            </p>
+            <p>
+              The synthesis shifted the team's framing from
+              <em>"build every feature each client asked for"</em>
+              to <em>"compliance and core sync first, growth features next,
+              the legacy Express Pay rebuild last."</em>
+              Four clients aligned on a P0–P2 list within one working session.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 CONTEXT -->
+      <section class="section" id="context">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">01</p>
+            <h2 class="section-title">Context</h2>
+          </header>
+
+          <div class="two-col">
+            <div>
+              <h3 class="h3">The product</h3>
+              <p>
+                A credit-union messaging and payments platform that helps
+                community lenders engage members through SMS, email, and
+                in-app channels. Two new capabilities were on deck:
+              </p>
+              <ul class="bullets">
+                <li>
+                  <strong>Account Funding</strong> — letting members deposit
+                  into a savings or checking account they just opened, without
+                  needing to walk into a branch or call a service rep.
+                </li>
+                <li>
+                  <strong>AutoPay</strong> — letting members set up recurring
+                  loan payments from a debit card, ACH, or digital wallet,
+                  without the credit union having to chase them every cycle.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="h3">Why discovery mattered</h3>
+              <p>
+                Four credit unions had asked for both capabilities — but each
+                framed the problem differently. One client led with
+                <em>compliance</em>; another with <em>collections</em>;
+                another with <em>growth</em>. Without discovery, the engineering
+                roadmap risked becoming a stack of one-off configurations
+                instead of a coherent product.
+              </p>
+              <p>
+                My job was to figure out what was genuinely shared, what was
+                client-specific, and what was a non-goal disguised as a
+                priority.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 DISCOVERY -->
+      <section class="section section-alt" id="discovery">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">02</p>
+            <h2 class="section-title">Discovery approach</h2>
+          </header>
+
+          <p class="lead-p">
+            Four client conversations, captured as transcripts, then synthesized
+            by theme, persona, and priority. I deliberately ran the synthesis
+            <em>after</em> all four calls — not after each — to avoid anchoring
+            on the first client's vocabulary.
+          </p>
+
+          <ol class="step-list">
+            <li>
+              <span class="step-num">1</span>
+              <div>
+                <h4>Listen broadly</h4>
+                <p>
+                  One discovery call per client (4 in total), framed as
+                  open-ended walkthroughs of their current AutoPay and Account
+                  Funding flows. No demo, no pitch — I wanted them describing
+                  their world, not reacting to ours.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <div>
+                <h4>Tag every ask</h4>
+                <p>
+                  Pulled every feature request, complaint, compliance concern,
+                  and offhand worry into a flat list. Tagged each by client,
+                  product area (Account Funding / AutoPay / Express Pay), and
+                  signal strength (mentioned once vs. raised by multiple
+                  clients).
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <div>
+                <h4>Cluster into themes</h4>
+                <p>
+                  Surfaced four shared pain themes that crossed at least two
+                  clients. The rest stayed as client-specific notes — useful for
+                  account managers, but not roadmap drivers.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <div>
+                <h4>Map personas, not people</h4>
+                <p>
+                  Each client had a dominant lens: compliance, growth,
+                  operations, or collections. The same feature ask meant
+                  different things depending on which lens framed it.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <div>
+                <h4>Prioritize against the lens</h4>
+                <p>
+                  Built a single P0 → P2 list, with each item tagged by which
+                  persona raised it and which would block adoption if it
+                  shipped late.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="aside">
+            <p class="aside-tag">A note on the four clients</p>
+            <p>
+              For this public write-up, the four credit unions are referred to
+              as <strong>Client A</strong>, <strong>B</strong>,
+              <strong>C</strong>, and <strong>D</strong>. The findings,
+              persona structure, and priority outputs are unchanged.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 03 PAIN THEMES -->
+      <section class="section" id="themes">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">03</p>
+            <h2 class="section-title">Four pain themes</h2>
+          </header>
+          <p class="lead-p">
+            The four themes that crossed at least two clients. Each one was a
+            user-side problem, not a feature gap — which mattered for how I
+            framed the recommendations later.
+          </p>
+
+          <div class="theme-grid">
+            <article class="theme">
+              <p class="theme-num">Theme 01</p>
+              <h3>Slow funding is bleeding new members</h3>
+              <p class="theme-body">
+                Clients A and C described their current deposit process as
+                entirely manual — members have to call in, walk into a branch,
+                or physically deposit funds. There is no campaign-driven or
+                automated way to prompt members to add money to a new account.
+              </p>
+              <blockquote>
+                "It's all manual. Yeah, we don't have… it's a manual process."
+                <cite>Stakeholder, Client A</cite>
+              </blockquote>
+              <p class="theme-implication">
+                <strong>Implication:</strong> The pain is felt at onboarding,
+                not at servicing. The fix has to live where members already
+                are — SMS, email — not behind another login.
+              </p>
+            </article>
+
+            <article class="theme">
+              <p class="theme-num">Theme 02</p>
+              <h3>Account funding is table stakes, not a differentiator</h3>
+              <p class="theme-body">
+                A stakeholder at Client A made it pointed: every modern
+                onboarding flow already has account funding. Shipping it is
+                table stakes; building it as a hero feature is the wrong frame.
+              </p>
+              <blockquote>
+                "I think everybody is going to already have it for account
+                opening. I wouldn't build it first because everybody has it.
+                I don't think there'd be as much interest."
+                <cite>Stakeholder, Client A</cite>
+              </blockquote>
+              <p class="theme-implication">
+                <strong>Implication:</strong> Don't market Account Funding
+                as the headline. Build it well, ship it quietly, and let
+                AutoPay and Express Pay carry the differentiation story.
+              </p>
+            </article>
+
+            <article class="theme">
+              <p class="theme-num">Theme 03</p>
+              <h3>High-friction funding kills account opening</h3>
+              <p class="theme-body">
+                Client C described drop-off at the funding step during account
+                opening: limited to card and ACH only, no modern wallets,
+                enough friction that applicants abandon. They can't complete
+                funding, so they can't finish opening.
+              </p>
+              <blockquote>
+                Their current funding methods are purely traditional — card and
+                ACH only — because integrating Plaid through their loan
+                origination platform is very expensive. Applicants used to
+                modern money movement are dropping off.
+                <cite>Synthesis from Client C call</cite>
+              </blockquote>
+              <p class="theme-implication">
+                <strong>Implication:</strong> The funding-method gap is a
+                conversion problem disguised as a feature request. Wallet
+                expansion (Apple Pay, Cash App, Venmo, PayPal) is the
+                P1 lever.
+              </p>
+            </article>
+
+            <article class="theme">
+              <p class="theme-num">Theme 04</p>
+              <h3>Members are calling in for AutoPay reminders</h3>
+              <p class="theme-body">
+                Client C surfaced this most concretely: members are actively
+                calling in just to be reminded and resent a payment link.
+                There's no reliable, automatic way for them to stay on top of
+                a due date.
+              </p>
+              <blockquote>
+                "We're already getting members who are calling in. They're
+                like, 'Hey, I got a text last month. Can I get a text again
+                this month?'"
+                <cite>Stakeholder, Client C</cite>
+              </blockquote>
+              <p class="theme-implication">
+                <strong>Implication:</strong> The AutoPay opportunity isn't a
+                new payment rail — it's removing a recurring inbound call.
+                Frame the pitch as deflection, not enrolment.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 PERSONAS -->
+      <section class="section section-alt" id="personas">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">04</p>
+            <h2 class="section-title">Four stakeholder personas</h2>
+          </header>
+          <p class="lead-p">
+            Same product. Four very different lenses. Naming the lens made
+            disagreements legible — they weren't conflicting requirements,
+            they were the same requirement read through different priorities.
+          </p>
+
+          <div class="persona-grid">
+            <article class="persona persona-a">
+              <header>
+                <p class="persona-tag">Client A</p>
+                <h3>Compliance-first</h3>
+              </header>
+              <dl>
+                <dt>Top priority</dt>
+                <dd>Audit trail, NCUA-aligned consent, deposit campaigns for existing members</dd>
+                <dt>Tells</dt>
+                <dd>
+                  "We've already vetted this with Repay." Cares about regulator
+                  language before features.
+                </dd>
+                <dt>Blocker if missed</dt>
+                <dd>SMS opt-in &amp; consent capture in the audit log</dd>
+              </dl>
+            </article>
+
+            <article class="persona persona-b">
+              <header>
+                <p class="persona-tag">Client B</p>
+                <h3>Growth-focused</h3>
+              </header>
+              <dl>
+                <dt>Top priority</dt>
+                <dd>Savings-account funding campaigns to lift balances</dd>
+                <dt>Tells</dt>
+                <dd>
+                  Reaction to AutoPay was "very well lined out." Already
+                  bought-in; wants to move fast.
+                </dd>
+                <dt>Blocker if missed</dt>
+                <dd>Link-based campaigns + engagement analytics</dd>
+              </dl>
+            </article>
+
+            <article class="persona persona-c">
+              <header>
+                <p class="persona-tag">Client C</p>
+                <h3>Operations-focused</h3>
+              </header>
+              <dl>
+                <dt>Top priority</dt>
+                <dd>Wallet-rich account-funding widget; deflecting inbound calls</dd>
+                <dt>Tells</dt>
+                <dd>
+                  Counts call volume per cycle. Frames every feature as a cost
+                  per member, per month.
+                </dd>
+                <dt>Blocker if missed</dt>
+                <dd>Post-funding setup prompt + savings mandate</dd>
+              </dl>
+            </article>
+
+            <article class="persona persona-d">
+              <header>
+                <p class="persona-tag">Client D</p>
+                <h3>Collections-first</h3>
+              </header>
+              <dl>
+                <dt>Top priority</dt>
+                <dd>AutoPay post-collections, with grace periods that match policy</dd>
+                <dt>Tells</dt>
+                <dd>
+                  Pre-launch, but has very specific rules per loan type. Will
+                  not adopt until per-product config is real.
+                </dd>
+                <dt>Blocker if missed</dt>
+                <dd>Per-loan-type grace and minimum amount config</dd>
+              </dl>
+            </article>
+          </div>
+
+          <div class="alignment-note">
+            <h4>Where they aligned</h4>
+            <ul class="bullets">
+              <li>
+                All four want one platform for funding <em>and</em> deposit
+                frictionless flows — they're tired of stitching providers.
+              </li>
+              <li>
+                All four cited manual effort or call volume as the
+                business case, not "modernization."
+              </li>
+              <li>
+                All four would adopt if SMS, mobile web, and a hosted
+                fallback are first-class — not afterthoughts.
+              </li>
+            </ul>
+            <h4 class="mt">Where they diverged</h4>
+            <ul class="bullets">
+              <li>
+                Client A wants to ship audit-trail and consent
+                <em>before</em> any growth feature.
+              </li>
+              <li>
+                Client D wants per-loan-type config or it won't enable AutoPay
+                at all.
+              </li>
+              <li>
+                Client C wants Apple Pay, Cash App, Venmo, PayPal in the
+                wallet — Client A treats them as future scope.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 PRIORITY -->
+      <section class="section" id="priority">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">05</p>
+            <h2 class="section-title">Consolidated priority list</h2>
+          </header>
+          <p class="lead-p">
+            One list for the product team, owned by the design lens. Each item
+            is tagged with the persona that raised it and the user problem it
+            solves — not just the feature label.
+          </p>
+
+          <div class="priority-table" role="table" aria-label="Priority list">
+            <div class="priority-row priority-head" role="row">
+              <span role="columnheader">Priority</span>
+              <span role="columnheader">Feature area</span>
+              <span role="columnheader">Action</span>
+              <span role="columnheader">Raised by</span>
+            </div>
+
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p0"></span>P0</span>
+              <span role="cell">Compliance &amp; consent</span>
+              <span role="cell">NCUA verbiage, audit trail for AutoPay setup, SMS opt-in guidance</span>
+              <span role="cell">Client A</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p0"></span>P0</span>
+              <span role="cell">Core sync</span>
+              <span role="cell">Real-time balance sync, auto-cancel AutoPay on loan payoff</span>
+              <span role="cell">Clients C, D</span>
+            </div>
+
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p1"></span>P1</span>
+              <span role="cell">AutoPay date controls</span>
+              <span role="cell">Grace-period config per loan type, member disclosure</span>
+              <span role="cell">Client D</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p1"></span>P1</span>
+              <span role="cell">AutoPay loan logic</span>
+              <span role="cell">Per-method, per-context behaviour (ACH vs card)</span>
+              <span role="cell">Clients C, D</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p1"></span>P1</span>
+              <span role="cell">AutoPay re-access</span>
+              <span role="cell">Generic management link + agent-side AutoPay cancel</span>
+              <span role="cell">Clients C, D</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p1"></span>P1</span>
+              <span role="cell">Wallet expansion</span>
+              <span role="cell">Apple Pay, Cash App, Venmo, PayPal for cash-heavy adjacent members</span>
+              <span role="cell">Clients C, D</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p1"></span>P1</span>
+              <span role="cell">Account-funding campaigns</span>
+              <span role="cell">SMS/email campaign flow for savings deposits to existing members</span>
+              <span role="cell">Client B</span>
+            </div>
+
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p2"></span>P2</span>
+              <span role="cell">Express Pay revamp</span>
+              <span role="cell">Hold until Q2 revamp; then re-engage Clients C and D</span>
+              <span role="cell">Clients C, D</span>
+            </div>
+            <div class="priority-row" role="row">
+              <span role="cell"><span class="dot dot-p2"></span>P2</span>
+              <span role="cell">Per loan-type config</span>
+              <span role="cell">Min/max amounts, fee rules, grace periods per product type</span>
+              <span role="cell">Client D</span>
+            </div>
+          </div>
+
+          <div class="callout">
+            <p>
+              <strong>The hardest decision was Account Funding's placement.</strong>
+              Three clients ranked it highly — but the framing in Theme 02
+              (Client A: <em>"everybody has it"</em>) flagged it as table
+              stakes. I held it as a P1 with a campaign-led entry point,
+              not a hero feature. The product team agreed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 RECOMMENDATIONS -->
+      <section class="section section-alt" id="recommendations">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">06</p>
+            <h2 class="section-title">Design moves coming out of discovery</h2>
+          </header>
+
+          <div class="reco-grid">
+            <article class="reco">
+              <h4>Lead with consent, not features</h4>
+              <p>
+                The first AutoPay screen should foreground SMS opt-in and the
+                NCUA-aligned consent line. This is the unlock for Client A —
+                without it, no other feature ships there.
+              </p>
+            </article>
+            <article class="reco">
+              <h4>Treat AutoPay as call-deflection</h4>
+              <p>
+                The success metric is not enrolment volume — it's the drop in
+                "remind me again" inbound calls. Reminder cadence, fail
+                states, and self-serve management are the design surface that
+                matters.
+              </p>
+            </article>
+            <article class="reco">
+              <h4>Wallets as a conversion lever</h4>
+              <p>
+                Apple Pay, Cash App, Venmo, PayPal aren't a checkbox — they're
+                the fix for the account-opening drop-off Client C named.
+                Design wallet selection as the most prominent choice on the
+                funding step, not a secondary tab.
+              </p>
+            </article>
+            <article class="reco">
+              <h4>Per-loan-type config as a first-class screen</h4>
+              <p>
+                Client D won't enable AutoPay without it; if it ships as a
+                config-file edit, it ships as nothing. Build it as an admin
+                screen with grace, min, max, and disclosure copy fields —
+                not a JSON blob.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 REFLECTION -->
+      <section class="section" id="reflection">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="section-num">07</p>
+            <h2 class="section-title">Reflection</h2>
+          </header>
+
+          <div class="two-col">
+            <div>
+              <h3 class="h3">What worked</h3>
+              <ul class="bullets">
+                <li>
+                  Running synthesis <em>after</em> all four calls kept me
+                  from anchoring on the first client's vocabulary. The
+                  "table stakes" framing in Theme 02 would have looked like
+                  an outlier if I'd already grouped Account Funding as P0.
+                </li>
+                <li>
+                  Naming the four personas by lens (compliance / growth /
+                  operations / collections) gave the engineering and PM
+                  partners a quick way to sanity-check decisions: "which lens
+                  is this for?"
+                </li>
+                <li>
+                  Tagging each priority by <em>which client would block
+                  adoption if missed</em> turned the priority list from
+                  opinion into commitment.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="h3">What I'd do differently</h3>
+              <ul class="bullets">
+                <li>
+                  Run a second, shorter call with each client after the
+                  synthesis, walking them through their assigned persona.
+                  I assigned them; I didn't validate the assignment.
+                </li>
+                <li>
+                  Bring a member-side researcher in earlier. The four
+                  conversations were with credit-union staff — the
+                  member-facing pain is inferred, not directly observed.
+                </li>
+                <li>
+                  Sketch the AutoPay reminder flow during the calls. With
+                  Theme 04 this clear, I could have started shaping the
+                  cadence and copy in the same session instead of a follow-up.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="closing">
+            <p>
+              The single most useful artefact from this discovery wasn't the
+              priority list — it was the persona lens. Six months from now,
+              when a fifth client lands with a new feature ask, the team has
+              a way to read the request without re-running the discovery.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <p>UX Discovery Case Study · Built for a UX-lead review.</p>
+        <p class="muted">
+          Client names anonymized as A / B / C / D for this public write-up.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
